@@ -31,4 +31,7 @@ Route::group([
 ], function ($router) {
     Route::post('/new', [SubsidiariesController::class, 'store'])->name('subsidiaries.store');
     Route::get('/{subsidiary}', [SubsidiariesController::class, 'show'])->name('subsidiaries.show');
+    Route::get('/', [SubsidiariesController::class, 'index'])->name('subsidiaries.index');
+    Route::put('/{subsidiary}', [SubsidiariesController::class, 'update'])->name('subsidiaries.update');
+    Route::delete('/{subsidiary}', [SubsidiariesController::class, 'destroy'])->name('subsidiaries.destroy');
 });
